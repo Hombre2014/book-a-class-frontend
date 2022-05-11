@@ -1,17 +1,17 @@
-import { CourseState } from './courseSlice';
+// import { CourseState } from './courseSlice';
 
-const API_URL = 'http://localhost:3000';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-export async function fetchCourses() {
-  return fetch(`${API_URL}/courses.json`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-    .then((response) => response.json())
-    .catch((error) => {
-      console.log('Error: ', error);
-      return {} as CourseState;
-    });
-}
+const API_URL = 'http://localhost:3000/api/v1/courses';
+
+const fetchCourses = createAsyncThunk(
+  'courses/fetchCourses',
+  async () => {
+    const courses = await fetch(API_URL);
+    const res = await courses.json();
+    console.log(res);
+    return res;
+  },
+);
+
+export default fetchCourses;

@@ -1,11 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Courses from './features/courses/courses';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Book a class</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Courses />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

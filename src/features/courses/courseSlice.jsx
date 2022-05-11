@@ -1,42 +1,28 @@
+import { createSlice } from '@reduxjs/toolkit';
+import fetchCourses from './courseAPI';
 
+export const courseSlice = createSlice({
+  name: 'courses',
+  initialState: {},
+  reducers: {},
+  extraReducers: (builder) => {
+    /* eslint-disable no-param-reassign */
+    builder.addCase(fetchCourses.fulfilled, (state, action) => {
+      state.courses = action.payload;
+      console.log(state.courses);
+      /* eslint-disable no-param-reassign */
+    });
+  },
+});
 
-export enum Statuses {
-  Initial = 'Not Fetched',
-  Loading = 'Loading ...',
-  UpToDate = 'Up To Date',
-  Deleted = 'Deleted',
-  Error = 'Error',
-}
+// export const {} = courseSlice.actions;
 
-export interface CourseState {
-  id?: number;
-  title: string;
-  description: string;
-  category: string;
-  duration: number;
-  photo: string;
-  price: decimal;
-  created_at?: any;
-  updated_at?: any;
-}
+// export const selectCourses = (state) => state.courses.courses;
 
-export interface CoursesState {
-  courses: CourseState[];
-}
+// export const selectStatus = (state) => state.courses.status;
 
-const initialState: CoursesState = {
-  courses: [
-    {
-      id: 0,
-      title: '',
-      description: '',
-      category: '',
-      diration: 0,
-      photo: '',
-      price: 0,
-      created_at: '',
-      updated_at: '',
-    },
-  ],
-  status: Statuses.Initial,
-};
+// export default courseSlice.reducer;
+
+// export const { getCourses } = courseSlice.actions;
+
+export default courseSlice.reducer;
