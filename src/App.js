@@ -1,12 +1,10 @@
-import React from 'react';
 import './App.css';
+import Home from './pages/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Book a class</h1>
-    </div>
-  );
-}
+const App = () => (
+  <div className="text-sky-500 d-flex">
+    <Home />
+  </div>
+);
 
 export default App;
