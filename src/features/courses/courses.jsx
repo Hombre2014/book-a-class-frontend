@@ -12,9 +12,6 @@ const Courses = () => {
     dispatch(fetchCourses());
   }, []);
 
-  // const allCourses = useSelector((state) => state.courses);
-  console.log(courses);
-  console.log(courses.courses[1].description);
   return (
     <div>
       <h1>Book a class online</h1>
