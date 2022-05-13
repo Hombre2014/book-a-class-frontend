@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Course from './Course';
 import fetchCourses from './courseAPI';
@@ -6,6 +7,7 @@ import fetchCourses from './courseAPI';
 const Courses = () => {
   const dispatch = useDispatch();
   const courses = useSelector((state) => state.courses);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchCourses());
@@ -21,7 +23,7 @@ const Courses = () => {
             category={course.category}
             photo={course.photo}
           />
-          <a href="/details" data-id={course.id}>Details</a>
+          <button type="button" value={course.id} onClick={() => navigate(`/details/${course.id}`)}>Details</button>
         </div>
       ))}
     </div>

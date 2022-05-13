@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Courses from './features/courses/Courses';
-// import Course from './features/courses/Course';
 import Details from './pages/Details';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Courses />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
     </BrowserRouter>
   );
