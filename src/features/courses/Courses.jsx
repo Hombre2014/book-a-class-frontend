@@ -15,7 +15,7 @@ const Courses = () => {
 
   return (
     <div>
-      <h1>Latest Courses</h1>
+      <h1 className="text-center">Latest Courses</h1>
       {courses.courses && courses.courses.length > 0 && courses.courses.map((course) => (
         <div className="key" key={course.id}>
           <Course
