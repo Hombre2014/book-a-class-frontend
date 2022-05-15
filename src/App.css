@@ -54,9 +54,41 @@
 
 .description {
   text-align: center;
+  font-weight: bold;
   color: #fff;
   position: absolute;
   top: 60%;
-  
-  padding: 0 8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+.reserve-button {
+  background-color: #fff;
+  color: #96bf02;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+}
+
+.form-buttons {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 2rem;
+}
+
+.select-container {
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+}
+
+.select-button {
+  background-color: #96bf02;
+  color: #fff;
+}
+

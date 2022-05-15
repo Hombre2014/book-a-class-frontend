@@ -18,11 +18,35 @@ const Reserve = () => {
     fetchCourse();
   }, []);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // actions[action]().then((data) => {
+    //   props.getNotes();
+    //   props.history.push("/dashboard/");
+    // });
+  };
+
   return (
     <div className="container-reserved">
       <img className="photo-reserve" src={course.photo} alt="Web" />
       <h1 className="h1 title">{course.title}</h1>
       <p className="description">{course.description}</p>
+      <div className="form-buttons">
+        <div className="select-container">
+          <select id="date" name="start-date" form="reserve" className="select-button">
+            <option value="">Date</option>
+            <option value="2022-05-23">2022-05-23</option>
+            <option value="2022-06-23">2022-06-23</option>
+            <option value="2022-07-23">2022-07-23</option>
+            <option value="2022-08-23">2022-08-23</option>
+          </select>
+        </div>
+        <form onSubmit={handleSubmit} id="reserve">
+          <input type="hidden" name="user-id" id="user-id" value="1" />
+          <input type="hidden" name="course-id" id="course-id" value={course.id} />
+          <button className="reserve-button" type="button">Reserve</button>
+        </form>
+      </div>
     </div>
   );
 };
