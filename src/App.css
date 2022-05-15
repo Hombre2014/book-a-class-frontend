@@ -20,3 +20,43 @@
 .desktop-nav {
   font-family: 'Roboto', sans-serif;
 }
+
+.container-reserved {
+  width: 100%;
+  position: relative;
+  background-color: #96bf02;
+  opacity: 0.8;
+}
+
+.photo-reserve {
+  height: 100vh !important;
+  position: absolute 0 0;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  z-index: 5;
+  border-bottom: 2px solid #b1f053cc;
+  padding: 0 4rem;
+  padding-bottom: 1rem;
+}
+
+.description {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  
+  padding: 0 8rem;
+}
