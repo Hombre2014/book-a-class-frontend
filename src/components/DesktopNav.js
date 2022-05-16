@@ -6,7 +6,7 @@ import linkedin from '../assets/images/linkedin-icon.png';
 import github from '../assets/images/github-icon.png';
 
 const navigation = [
-  { name: 'Courses', href: '#', current: true },
+  { name: 'Courses', href: '/', current: true },
   { name: 'Reserve', href: '#', current: false },
   { name: 'My reservations', href: '/reservations', current: false },
   { name: 'Add Course', href: '#', current: false },

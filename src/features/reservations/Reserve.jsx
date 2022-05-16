@@ -23,7 +23,7 @@ const Reserve = () => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
       {
-        reserve_date: '2022-05-24',
+        reserve_date: '2022-06-23',
         duration: 14,
         user_id: 1,
         course_id: course.id,
@@ -41,10 +41,6 @@ const Reserve = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createReservation();
-    // actions[action]().then((data) => {
-    //   props.getNotes();
-    //   props.history.push("/dashboard/");
-    // });
   };
 
   return (
@@ -65,7 +61,7 @@ const Reserve = () => {
         <form onSubmit={handleSubmit} id="reserve">
           <input type="hidden" name="user-id" id="user-id" value="1" />
           <input type="hidden" name="course-id" id="course-id" value={course.id} />
-          <button className="reserve-button" type="button">Reserve</button>
+          <button className="reserve-button" type="submit">Reserve</button>
         </form>
       </div>
     </div>
