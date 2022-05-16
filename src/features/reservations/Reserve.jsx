@@ -11,6 +11,7 @@ const Reserve = () => {
     const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
     const res = await course.json();
     setCourse(res);
+    console.log(res);
     return res;
   };
 
@@ -23,16 +24,16 @@ const Reserve = () => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
       {
-        reserve_date: '2022-06-23',
-        duration: 14,
-        user_id: 1,
+        reserve_date: '2022-07-23',
+        duration: 7,
+        user_id: 4,
         course_id: course.id,
       },
     ),
   };
 
   const createReservation = async () => {
-    const response = await fetch(`http://localhost:3000/api/v1/courses/${id}/reservations`, newReservation);
+    const response = await fetch('http://localhost:3000/api/v1/users/4/reservations', newReservation);
     const data = await response.json();
     // !! Set state for reservations
     return data;
@@ -59,7 +60,7 @@ const Reserve = () => {
           </select>
         </div>
         <form onSubmit={handleSubmit} id="reserve">
-          <input type="hidden" name="user-id" id="user-id" value="1" />
+          <input type="hidden" name="user-id" id="user-id" value="4" />
           <input type="hidden" name="course-id" id="course-id" value={course.id} />
           <button className="reserve-button" type="submit">Reserve</button>
         </form>

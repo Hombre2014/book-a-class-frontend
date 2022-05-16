@@ -1,12 +1,9 @@
-// import { useNavigate } from 'react-router-dom';
 import './course.css';
 
 const Course = (course) => {
   const {
     title, category, description, duration, photo, price,
   } = course;
-
-  // const navigate = useNavigate();
 
   return (
     <div className="course-details">

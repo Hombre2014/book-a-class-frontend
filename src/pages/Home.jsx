@@ -3,7 +3,7 @@ import Menu from './Menu';
 import Courses from '../features/courses/Courses';
 
 const Home = () => (
-  <div className="flex">
+  <div className="home">
     <Menu />
     <Courses />
   </div>
