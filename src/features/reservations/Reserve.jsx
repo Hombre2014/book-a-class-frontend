@@ -18,8 +18,29 @@ const Reserve = () => {
     fetchCourse();
   }, []);
 
+  const newReservation = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(
+      {
+        reserve_date: '2022-05-24',
+        duration: 14,
+        user_id: 1,
+        course_id: course.id,
+      },
+    ),
+  };
+
+  const createReservation = async () => {
+    const response = await fetch(`http://localhost:3000/api/v1/courses/${id}/reservations`, newReservation);
+    const data = await response.json();
+    // !! Set state for reservations
+    return data;
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    createReservation();
     // actions[action]().then((data) => {
     //   props.getNotes();
     //   props.history.push("/dashboard/");
