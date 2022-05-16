@@ -30,7 +30,7 @@
 
 .photo-reserve {
   height: 100vh !important;
-  position: absolute 0 0;
+  position: relative;
   margin: 0 auto;
   opacity: 0.3;
 }
