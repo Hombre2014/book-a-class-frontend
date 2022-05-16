@@ -20,3 +20,83 @@
 .desktop-nav {
   font-family: 'Roboto', sans-serif;
 }
+
+.container-reserved {
+  width: 100%;
+  position: relative;
+  background-color: #96bf02;
+  opacity: 0.8;
+}
+
+.photo-reserve {
+  height: 100vh !important;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  z-index: 5;
+  border-bottom: 2px solid #b1f053cc;
+  padding: 0 4rem;
+  padding-bottom: 1rem;
+}
+
+.description {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reserve-button {
+  background-color: #fff;
+  color: #96bf02;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+}
+
+.form-buttons {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 2rem;
+}
+
+.select-container {
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+}
+
+.select-button {
+  background-color: #96bf02;
+  color: #fff;
+}
+
+.my-res-title {
+  margin: 2rem auto;
+}
+
+.container-table {
+  max-width: 80%;
+  margin: 2rem auto;
+}
