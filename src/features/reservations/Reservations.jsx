@@ -34,7 +34,7 @@ const Reservations = () => {
                 && reservations.reservations.length > 0
                 && reservations.reservations.map((reservation) => (
                   <tr className="key" key={reservation.id}>
-                    <th className="head">{courses.courses[reservation.course_id].title}</th>
+                    <th className="head">{courses.courses[reservation.course_id - 1].title}</th>
                     <th className="head">{reservation.reserve_date}</th>
                     <th className="head">{reservation.duration}</th>
                   </tr>
