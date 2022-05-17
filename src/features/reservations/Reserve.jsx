@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import Course from '../courses/Course';
-// import Details from '../../pages/Details';
 
 const Reserve = () => {
   const { id } = useParams();
   const [course, setCourse] = useState({});
+  const [dates, setDates] = useState([]);
 
   const fetchCourse = async () => {
     const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
     const res = await course.json();
     setCourse(res);
-    console.log(res);
+    console.log('Fetch course: ', res);
     return res;
   };
 
@@ -19,12 +18,28 @@ const Reserve = () => {
     fetchCourse();
   }, []);
 
+  const fetchDates = async () => {
+    const dates = await fetch(`http://localhost:3000/api/v1/courses/${id}/start_dates`);
+    const res = await dates.json();
+    setDates(res);
+    return res;
+  };
+
+  useEffect(() => {
+    fetchDates();
+  }, []);
+
+  const handleChange = (event) => {
+    console.log('Date change: ', event.target.value);
+    return event.target.value;
+  };
+
   const newReservation = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
       {
-        reserve_date: '2022-07-23',
+        reserve_date: handleChange,
         duration: 7,
         user_id: 4,
         course_id: course.id,
@@ -35,7 +50,6 @@ const Reserve = () => {
   const createReservation = async () => {
     const response = await fetch('http://localhost:3000/api/v1/users/4/reservations', newReservation);
     const data = await response.json();
-    // !! Set state for reservations
     return data;
   };
 
@@ -53,10 +67,11 @@ const Reserve = () => {
         <div className="select-container">
           <select id="date" name="start-date" form="reserve" className="select-button">
             <option value="">Date</option>
-            <option value="2022-05-23">2022-05-23</option>
-            <option value="2022-06-23">2022-06-23</option>
-            <option value="2022-07-23">2022-07-23</option>
-            <option value="2022-08-23">2022-08-23</option>
+            {dates.map((date) => (
+              <option value={date} key={date} onChange={handleChange}>
+                {date}
+              </option>
+            ))}
           </select>
         </div>
         <form onSubmit={handleSubmit} id="reserve">
