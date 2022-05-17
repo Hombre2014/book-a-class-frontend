@@ -142,3 +142,21 @@
 .title-text {
   margin: 2rem 0;
 }
+
+.btn-reserve {
+  margin: 1rem;
+  border-radius: 20px;
+  background-color: #95b916;
+  max-width: 180px;
+  color: #fff;
+}
+
+.con-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+th {
+  text-align: left;
+}
