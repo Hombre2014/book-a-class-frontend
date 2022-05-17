@@ -65,10 +65,10 @@ const Reserve = () => {
       <p className="description">{course.description}</p>
       <div className="form-buttons">
         <div className="select-container">
-          <select id="date" name="start-date" form="reserve" className="select-button">
+          <select id="date" name="start-date" form="reserve" className="select-button" onChange={handleChange}>
             <option value="">Date</option>
             {dates.map((date) => (
-              <option value={date} key={date} onChange={handleChange}>
+              <option value={date} key={date}>
                 {date}
               </option>
             ))}
