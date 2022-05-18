@@ -14,7 +14,7 @@ const menuItems = [
   { name: 'Courses', path: '/' },
   { name: 'Reserve', path: '/' },
   { name: 'My reservations', path: '/reservations' },
-  { name: 'Add Courses', path: '/' },
+  { name: 'Add Courses', path: '/addcourse' },
   { name: 'Delete Courses', path: '/' },
 ];
 

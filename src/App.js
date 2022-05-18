@@ -7,6 +7,7 @@ import Reserve from './features/reservations/Reserve';
 import Reservations from './features/reservations/Reservations';
 import Login from './components/Login';
 import Registration from './components/Registration';
+import AddCourse from './components/Courseform/AddCourse';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/addcourse" element={<AddCourse />} />
       </Routes>
     </BrowserRouter>
   );

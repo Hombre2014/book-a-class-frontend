@@ -9,7 +9,7 @@ const navigation = [
   { name: 'Courses', href: '/', current: true },
   { name: 'Reserve', href: '#', current: false },
   { name: 'My reservation', href: '/reservations', current: false },
-  { name: 'Add Course', href: '/Add Course', current: false },
+  { name: 'Add Course', href: '/addcourse', current: false },
   { name: 'Delete Course', href: '#', current: false },
 ];
 
