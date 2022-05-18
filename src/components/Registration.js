@@ -61,7 +61,7 @@ const Registration = () => {
   return (
     <div className="d-flex flex-column align-items-center">
       <div className="d-flex justify-content-center p-3">
-        <h2 className="h1">Registartion Form</h2>
+        <h2 className="h1">Registration Form</h2>
       </div>
       <form className="auth_form_reg row g-3 needs-validation p-3 border" id="reg_id" noValidate>
         <div className="col-sm-6">

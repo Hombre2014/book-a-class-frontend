@@ -1,11 +1,13 @@
 import React from 'react';
 import Menu from './Menu';
-import Courses from '../features/courses/Courses';
+// import Courses from '../features/courses/Courses';
+import HomeContent from '../components/home/HomeContent';
 
 const Home = () => (
   <div className="home">
     <Menu />
-    <Courses />
+    <HomeContent />
+    {/* <Courses /> */}
   </div>
 );
 

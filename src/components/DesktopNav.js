@@ -11,6 +11,8 @@ const navigation = [
   { name: 'My reservation', href: '/reservations', current: false },
   { name: 'Add Course', href: '/Add Course', current: false },
   { name: 'Delete Course', href: '#', current: false },
+  { name: 'Registration', href: '/registration', current: false },
+  { name: 'Login', href: '/login', current: false },
 ];
 
 const social = [
