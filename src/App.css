@@ -37,7 +37,7 @@
 
 .title {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
@@ -57,9 +57,13 @@
   font-weight: bold;
   color: #fff;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.course-details {
+  margin: 2rem 1rem;
 }
 
 .reserve-button {
@@ -70,9 +74,14 @@
   min-width: 140px;
 }
 
+.reserve-button:hover {
+  color: #fff;
+  background-color: #96bf02;
+}
+
 .form-buttons {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -85,6 +94,7 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   min-width: 140px;
+  border: 2px solid #fff;
 }
 
 .select-button {
@@ -100,6 +110,7 @@
   max-width: 80%;
   margin: 2rem auto;
 }
+
 
 .auth_form_button {
   border: black 2px solid;
@@ -128,4 +139,84 @@
   .auth_form_reg {
     width: 80%;
   }
+
+.container-course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  border-radius: 5%;
+}
+
+.three-col {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.key {
+  max-width: 33%;
+  text-align: center;
+}
+
+.latest {
+  margin: 2rem 0 4rem 0;
+}
+
+.all-courses {
+  width: 100%;
+}
+
+.home {
+  display: flex;
+}
+
+.cat,
+.description-text {
+  color: #b5b5b5;
+}
+
+.title-text {
+  margin: 2rem 0;
+}
+
+.btn-reserve {
+  margin: 1rem;
+  border-radius: 20px;
+  background-color: #95b916;
+  max-width: 180px;
+  color: #fff;
+}
+
+.con-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+th {
+  text-align: left;
+}
+
+.success {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.back {
+  margin-right: 1rem;
+  background-color: #96bf02;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.back:hover {
+  color: #96bf02;
+  background-color: #fff;
 }
