@@ -1,5 +1,4 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import './course.css';
 
 const Course = (course) => {
   const {

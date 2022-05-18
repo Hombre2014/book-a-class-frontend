@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Reserve = () => {
   const { id } = useParams();
   const [course, setCourse] = useState({});
   const [dates, setDates] = useState([]);
+  const [date, setDate] = useState('');
+  const [reserved, setReserved] = useState(false);
+  const navigate = useNavigate();
 
   const fetchCourse = async () => {
     const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
     const res = await course.json();
     setCourse(res);
-    console.log('Fetch course: ', res);
     return res;
   };
 
@@ -30,7 +32,7 @@ const Reserve = () => {
   }, []);
 
   const handleChange = (event) => {
-    console.log('Date change: ', event.target.value);
+    setDate(event.target.value);
     return event.target.value;
   };
 
@@ -39,7 +41,7 @@ const Reserve = () => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
       {
-        reserve_date: handleChange,
+        reserve_date: date,
         duration: 7,
         user_id: 4,
         course_id: course.id,
@@ -56,6 +58,7 @@ const Reserve = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     createReservation();
+    setReserved(true);
   };
 
   return (
@@ -80,6 +83,14 @@ const Reserve = () => {
           <button className="reserve-button" type="submit">Reserve</button>
         </form>
       </div>
+      {reserved
+      && (
+        <div className="success">
+          <p className="text-center m-4">The reservation was successful.</p>
+          <button type="button" className="reserve-button back" onClick={() => navigate(`/details/${course.id}`)}>Back</button>
+          <button type="button" className="reserve-button" onClick={() => navigate('/reservations')}>My reservations</button>
+        </div>
+      )}
     </div>
   );
 };

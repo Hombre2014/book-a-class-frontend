@@ -1,5 +1,3 @@
-import './course.css';
-
 const ShortCourse = (course) => {
   const {
     title, category, description, photo,
