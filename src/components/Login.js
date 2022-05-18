@@ -30,7 +30,13 @@ const Login = () => {
       };
 
       dispatch(addTokenAsync(details));
-      window.location.href = '/';
+
+      if (token.length > 0) {
+        window.location.href = '/';
+      } else {
+        forms[0][0].value = '';
+        forms[0][1].value = '';
+      }
     }
 
     console.log(forms[0][0].value === '');
