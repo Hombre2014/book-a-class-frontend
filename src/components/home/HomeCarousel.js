@@ -16,11 +16,14 @@ const HomeCarousel = () => {
         <button type="button" onClick={scrollRight}>
           ᐊ
         </button>
-        <button type="button" onClick={scrollLeft}>
+        <button type="button" className="button-right" onClick={scrollLeft}>
           ᐅ
         </button>
       </div>
       <div id="home-carousel" className="home-carousel">
+        <ClassCard />
+        <ClassCard />
+        <ClassCard />
         <ClassCard />
         <ClassCard />
         <ClassCard />
