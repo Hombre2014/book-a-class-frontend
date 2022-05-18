@@ -8,4 +8,20 @@ export const addToken = (payload) => ({
   payload,
 });
 
+export const removeToken = (payload) => ({
+  type: REMOVE_TOKEN,
+  payload,
+});
 
+const tokenReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_TOKEN:
+      return [...state, action.payload];
+    case REMOVE_TOKEN:
+      return state.filter((token) => token !== action.payload)
+    default:
+      return state;
+  }
+}
+
+export default tokenReducer;
