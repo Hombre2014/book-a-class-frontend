@@ -13,6 +13,16 @@ export const removeToken = (payload) => ({
   payload,
 });
 
+export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:3000/api/v1/authenticate',
+{
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(payload),
+}).then((response) => response.text())
+.then((data) => {});
+
 const tokenReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TOKEN:
