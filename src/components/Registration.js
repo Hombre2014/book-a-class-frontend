@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const navigate = useNavigate();
-  const forms = document.querySelectorAll('.needs-validation');
 
   const createUser = (payload) => fetch('http://localhost:3000/api/v1/users',
     {
@@ -23,16 +22,22 @@ const Registration = () => {
     });
 
   const valid = () => {
+    const forms = document.querySelectorAll('.needs-validation');
     const form = document.querySelector('#reg_id');
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
 
+      const fullName = forms[0][0].value.toString();
+      const userName = forms[0][1].value.toString();
+      const emails = forms[0][2].value.toString();
+      const passWord = forms[0][3].value.toString();
+
       const details = {
-        username: forms[0][1].value.toString(),
-        password: forms[0][3].value.toString(),
-        email: forms[0][2].value.toString(),
-        full_name: forms[0][0].value.toString(),
+        username: userName,
+        password: passWord,
+        email: emails,
+        full_name: fullName,
       };
 
       createUser(details);
