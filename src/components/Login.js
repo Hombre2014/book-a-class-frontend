@@ -1,10 +1,39 @@
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { addTokenAsync } from '../redux/login/login';
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.token, shallowEqual);
+  console.log(token);
+
   const valid = () => {
     // console.log('logs');
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation');
+
+    const usernameValue = forms[0][0].value;
+    const passwordValue = forms[0][1].value;
+
+    if ((usernameValue !== '') && (passwordValue !== '')) {
+      const form = document.querySelector('#login_id');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+      });
+
+      const details = {
+        username: usernameValue,
+        password: passwordValue,
+      };
+
+      dispatch(addTokenAsync(details));
+      window.location.href = '/';
+    }
+
+    console.log(forms[0][0].value === '');
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
@@ -25,7 +54,7 @@ const Login = () => {
       <div className="d-flex justify-content-center m-3">
         <h2 className="h1 p-3">Login Form</h2>
       </div>
-      <form className="auth_form row g-3 needs-validation p-3 border" noValidate>
+      <form className="auth_form row g-3 needs-validation p-3 border" id="login_id" noValidate>
         <div className="col-md-12">
           <label htmlFor="validationCustomUsername" className="form-label w-100 p-3">
             Username

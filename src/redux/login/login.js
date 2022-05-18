@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const ADD_TOKEN = 'frontend/login/ADD_TOKEN';
 const REMOVE_TOKEN = 'frontend/login/REMOVE_TOKEN';
 
@@ -14,24 +16,26 @@ export const removeToken = (payload) => ({
 });
 
 export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:3000/api/v1/authenticate',
-{
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(payload),
-}).then((response) => response.text())
-.then((data) => {});
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  }).then((response) => response.json())
+  .then((data) => {
+    dispatch(addToken(data.token));
+  });
 
 const tokenReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TOKEN:
       return [...state, action.payload];
     case REMOVE_TOKEN:
-      return state.filter((token) => token !== action.payload)
+      return state.filter((token) => token !== action.payload);
     default:
       return state;
   }
-}
+};
 
 export default tokenReducer;
