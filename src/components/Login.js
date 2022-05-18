@@ -34,8 +34,7 @@ const Login = () => {
       if (token.length > 0) {
         window.location.href = '/';
       } else {
-        forms[0][0].value = '';
-        forms[0][1].value = '';
+        window.location.href = '/login';
       }
     }
 

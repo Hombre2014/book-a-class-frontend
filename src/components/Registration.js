@@ -12,11 +12,13 @@ const Registration = () => {
       },
       body: JSON.stringify(payload),
     }).then((response) => response.json())
-    .then((data) => data);
-
-  const test = { success: 'llll' };
-  console.log(Object.keys(test));
-  console.log(Object.keys(test)[0] === 'success');
+    .then((data) => {
+      if (Object.keys(data)[0] === 'success') {
+        window.location.href = '/';
+      } else {
+        window.location.href = '/registration';
+      }
+    });
 
   const valid = () => {
     const form = document.querySelector('#reg_id');
