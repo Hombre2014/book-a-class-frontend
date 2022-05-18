@@ -100,3 +100,32 @@
   max-width: 80%;
   margin: 2rem auto;
 }
+
+.auth_form .auth_form_button {
+  border: black 2px solid;
+  padding: 0.8em;
+  border-radius: 10%;
+  font-weight: 500;
+}
+
+.auth_form {
+  width: 40%;
+}
+
+.auth_form_reg {
+  width: 60%;
+}
+
+@media screen and (max-width: 500px) {
+  .auth_form,
+  .auth_form_reg {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .auth_form,
+  .auth_form_reg {
+    width: 80%;
+  }
+}
