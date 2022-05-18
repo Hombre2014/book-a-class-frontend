@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Course from '../features/courses/Course';
 import SideBar from '../components/DesktopNav';
 import HamBurger from '../components/mobileNav';
@@ -7,8 +7,6 @@ import HamBurger from '../components/mobileNav';
 const Details = () => {
   const { id } = useParams();
   const [course, setCourse] = useState({});
-
-  const navigate = useNavigate();
 
   const fetchCourse = async () => {
     const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
@@ -39,7 +37,6 @@ const Details = () => {
             photo={course.photo}
             price={course.price}
           />
-          <button className="btn bg-lime-500" type="button" value={id} onClick={() => navigate(`/details/${id}/reserve`)}>Reserve</button>
         </div>
       </div>
     </div>
