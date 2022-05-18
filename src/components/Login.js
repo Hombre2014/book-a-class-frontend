@@ -2,12 +2,13 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { addTokenAsync } from '../redux/login/login';
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const token = useSelector((state) => state.token, shallowEqual);
-  console.log(token);
 
   const valid = () => {
     // console.log('logs');
@@ -31,11 +32,10 @@ const Login = () => {
 
       dispatch(addTokenAsync(details));
 
-      if (token.length > 0) {
-        window.location.href = '/';
-      } else {
-        window.location.href = '/login';
-      }
+      if (token.length > 0) navigate('/');
+      else navigate('/login');
+
+      // window.location.href = '/login';
     }
 
     console.log(forms[0][0].value === '');

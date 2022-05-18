@@ -30,6 +30,7 @@ export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:
 const tokenReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TOKEN:
+      if (state.includes(action.payload)) return state;
       return [...state, action.payload];
     case REMOVE_TOKEN:
       return state.filter((token) => token !== action.payload);

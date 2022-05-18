@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
+  const navigate = useNavigate();
   const forms = document.querySelectorAll('.needs-validation');
 
   const createUser = (payload) => fetch('http://localhost:3000/api/v1/users',
@@ -14,9 +16,9 @@ const Registration = () => {
     }).then((response) => response.json())
     .then((data) => {
       if (Object.keys(data)[0] === 'success') {
-        window.location.href = '/';
+        navigate('/');
       } else {
-        window.location.href = '/registration';
+        navigate('/registration');
       }
     });
 
@@ -27,10 +29,10 @@ const Registration = () => {
       event.preventDefault();
 
       const details = {
-        username: forms[0][1].value,
-        password: forms[0][3].value,
-        email: forms[0][2].value,
-        full_name: forms[0][0].value,
+        username: forms[0][1].value.toString(),
+        password: forms[0][3].value.toString(),
+        email: forms[0][2].value.toString(),
+        full_name: forms[0][0].value.toString(),
       };
 
       createUser(details);
