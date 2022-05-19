@@ -11,8 +11,6 @@ const Login = () => {
   const token = useSelector((state) => state.token, shallowEqual);
 
   const valid = () => {
-    // console.log('logs');
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation');
 
     const usernameValue = forms[0][0].value;
@@ -33,12 +31,12 @@ const Login = () => {
       dispatch(addTokenAsync(details));
 
       if (token.length > 0) navigate('/');
-      else navigate('/login');
-
-      // window.location.href = '/login';
+      else {
+        console.log(document.querySelector('#warn').innerText = 'Invalid User');
+        forms[0][0].value = '';
+        forms[0][1].value = '';
+      }
     }
-
-    console.log(forms[0][0].value === '');
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
@@ -56,7 +54,7 @@ const Login = () => {
 
   return (
     <div className="d-flex flex-column align-items-center">
-      <div className="d-flex justify-content-center m-3">
+      <div className="d-flex flex-column justify-content-center m-3">
         <h2 className="h1 p-3">Login Form</h2>
       </div>
       <form className="auth_form row g-3 needs-validation p-3 border" id="login_id" noValidate>
@@ -85,6 +83,7 @@ const Login = () => {
           <button className="auth_form_button" type="submit" onClick={() => valid()}>Submit form</button>
         </div>
       </form>
+      <p className="display-6 text-danger" id="warn" />
     </div>
   );
 };
