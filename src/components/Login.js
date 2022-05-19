@@ -96,7 +96,6 @@ const Login = () => {
         <p className="display-6 text-danger" id="warn" />
       </div>
     </div>
-
   );
 };
 

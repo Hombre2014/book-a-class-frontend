@@ -42,7 +42,6 @@ const DeletePage = () => {
         </table>
       </div>
     </div>
-
   );
 };
 

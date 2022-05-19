@@ -2,7 +2,11 @@
 
 # Book a class
 
->  This is the final group capstone project - front-end. The back-end is Book-a-class
+>  This is the final group capstone project - front-end. The back-end is Book-a-class. Please, see the link below:
+
+## Link to the back-end repo
+
+[Book-a-class](https://github.com/Hombre2014/Book-a-class)
 
 ## Project requirements
 
@@ -39,8 +43,6 @@ Run the following commands:</br>
 `npm start`</br>
 The WebDev server will ask you to change the port 3000, since it is already ocupied by the Rails server. Type "Y" and continue. The WebDev server will run on port 3001 and will open a new browser loading the home page.
 
-## Testing
-
 ## Authors
 
 👤 **Mubarak A Ibrahim**
@@ -48,17 +50,17 @@ The WebDev server will ask you to change the port 3000, since it is already ocup
 - GitHub: [@imubarak234](https://github.com/imubarak234)
 - LinkedIn: [Mubarak Ibrahim](https://www.linkedin.com/in/mubarak-ibrahim-1540a5208/)
 
-👤 **Kalolo Chola Lemba**
-
-- GitHub: [@KayLemba](https://github.com/KayLemba)
-- Twitter: [@King_Kaylo1](https://twitter.com/King_Kaylo1)
-- LinkedIn: [Kalolo (Chola) Lemba](https://www.linkedin.com/in/kalolo-lemba-41a8339a/)
-
 👤 **Yuriy Chamkoriyski**
 
 - GitHub: [@Hombre2014](https://github.com/Hombre2014)
 - Twitter: [@Chamkoriyski](https://twitter.com/Chamkoriyski)
 - LinkedIn: [axebit](https://linkedin.com/in/axebit)
+
+👤 **Kalolo Chola Lemba**
+
+- GitHub: [@KayLemba](https://github.com/KayLemba)
+- Twitter: [@King_Kaylo1](https://twitter.com/King_Kaylo1)
+- LinkedIn: [Kalolo (Chola) Lemba](https://www.linkedin.com/in/kalolo-lemba-41a8339a/)
 
 ## 🤝 Contributing
 
