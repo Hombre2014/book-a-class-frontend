@@ -14,8 +14,6 @@ const HomeCarousel = () => {
     dispatch(fetchCourses());
   }, [dispatch]);
 
-  console.log(courses);
-
   const scrollLeft = () => {
     document.getElementById('home-carousel').scrollLeft += 500;
   };
