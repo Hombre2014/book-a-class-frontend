@@ -11,8 +11,8 @@ import github from '../assets/images/github-icon.png';
 const navigation = [
   { name: 'Courses', href: '/', current: true },
   { name: 'Reserve', href: '#', current: false },
-  { name: 'My reservations', href: '/reservations', current: false },
-  { name: 'Add Course', href: '#', current: false },
+  { name: 'My reservation', href: '/reservations', current: false },
+  { name: 'Add Course', href: '/Add Course', current: false },
   { name: 'Delete Course', href: '#', current: false },
   { name: 'Logout', href: '#', current: false },
 ];
