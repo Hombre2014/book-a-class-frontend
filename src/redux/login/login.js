@@ -10,9 +10,8 @@ export const addToken = (payload) => ({
   payload,
 });
 
-export const removeToken = (payload) => ({
+export const removeToken = () => ({
   type: REMOVE_TOKEN,
-  payload,
 });
 
 export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:3000/api/v1/authenticate',
@@ -33,7 +32,7 @@ const tokenReducer = (state = initialState, action) => {
       if (state.includes(action.payload)) return state;
       return [...state, action.payload];
     case REMOVE_TOKEN:
-      return state.filter((token) => token !== action.payload);
+      return [];
     default:
       return state;
   }
