@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Reserve = () => {
@@ -8,6 +9,9 @@ const Reserve = () => {
   const [date, setDate] = useState('');
   const [reserved, setReserved] = useState(false);
   const navigate = useNavigate();
+  const token = useSelector((state) => state.token);
+
+  console.log(token[0]);
 
   const fetchCourse = async () => {
     const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
@@ -38,19 +42,21 @@ const Reserve = () => {
 
   const newReservation = {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token[0]}`,
+    },
     body: JSON.stringify(
       {
         reserve_date: date,
-        duration: 7,
-        user_id: 4,
+        duration: course.duration,
         course_id: course.id,
       },
     ),
   };
 
   const createReservation = async () => {
-    const response = await fetch('http://localhost:3000/api/v1/users/4/reservations', newReservation);
+    const response = await fetch('http://localhost:3000/api/v1/users/1/reservations', newReservation);
     const data = await response.json();
     return data;
   };
