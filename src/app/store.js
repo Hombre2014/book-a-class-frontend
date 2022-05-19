@@ -19,7 +19,6 @@ export const refresh = async () => {
   await fetch('http://localhost:3000/api/v1/courses')
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       data.map((info) => store.dispatch(addCourse(info)));
     });
 };

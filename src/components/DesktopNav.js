@@ -20,7 +20,6 @@ const SideBar = () => {
   const token = useSelector((state) => state.token, shallowEqual);
   const navigate = useNavigate();
 
-  console.log(token);
   const dispatch = useDispatch();
 
   return (
