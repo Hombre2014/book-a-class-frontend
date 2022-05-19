@@ -63,7 +63,7 @@ const Login = () => {
   return (
     <div className="flex">
       <Menu />
-      <div className="d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center login">
         <div className="d-flex flex-column justify-content-center m-3">
           <h2 className="h1 p-3">Login Form</h2>
         </div>
@@ -90,7 +90,7 @@ const Login = () => {
             </label>
           </div>
           <div className="col-12">
-            <button className="auth_form_button" type="submit" onClick={() => valid()}>Submit form</button>
+            <button className="reg-button" type="submit" onClick={() => valid()}>Submit form</button>
           </div>
         </form>
         <p className="display-6 text-danger" id="warn" />

@@ -127,9 +127,28 @@
 
 .auth_form_button {
   border: black 2px solid;
-  padding: 0.8em;
+  color: #fff;
+  background-color: rgb(245, 61, 61);
+  padding: 0.4rem 0.8em;
   border-radius: 10%;
   font-weight: 500;
+}
+
+.reg-button {
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.4rem 0.8em;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.reg-button:hover {
+  background-color: #bee923;
+  color: #fff;
+}
+
+.auth_form_button:hover {
+  background-color: rgb(182, 17, 17);
 }
 
 .auth_form {
@@ -181,7 +200,7 @@
 }
 
 .all-courses {
-  width: 100%;
+  width: 87%;
 }
 
 .home {
@@ -221,6 +240,15 @@ th {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+
+.text-slate-50,
+.text-slate-900 {
+  width: 100% !important;
+}
+
+.login {
+  width: 100%;
 }
 
 .back {

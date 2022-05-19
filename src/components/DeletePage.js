@@ -8,7 +8,6 @@ const DeletePage = () => {
   const course = useSelector((state) => state.courseM, shallowEqual);
   let count = 0;
 
-  const test = '234';
   return (
     <div className="flex">
       <Menu />
@@ -18,10 +17,9 @@ const DeletePage = () => {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Title</th>
-              <th scope="col">Descrption</th>
-              <th scope="col">Catogory</th>
+              <th scope="col">Description</th>
+              <th scope="col">Category</th>
               <th scope="col">Price</th>
-              <th scope="col">{test}</th>
             </tr>
           </thead>
           <tbody>

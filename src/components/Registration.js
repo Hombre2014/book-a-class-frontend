@@ -110,7 +110,7 @@ const Registration = () => {
           </div>
 
           <div className="col-12">
-            <button className="auth_form_button" type="submit" onClick={() => valid()}>Submit form</button>
+            <button className="reg-button" type="submit" onClick={() => valid()}>Submit form</button>
           </div>
         </form>
       </div>
