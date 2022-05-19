@@ -8,6 +8,7 @@ import Reservations from './features/reservations/Reservations';
 import Login from './components/Login';
 import Registration from './components/Registration';
 import Menu from './pages/Menu';
+import DeletePage from './components/DeletePage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/delete_course" element={<DeletePage />} />
       </Routes>
     </BrowserRouter>
   );
