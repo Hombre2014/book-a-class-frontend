@@ -16,6 +16,8 @@ const menuItems = [
   { name: 'My reservations', path: '/reservations' },
   { name: 'Add Courses', path: '/' },
   { name: 'Delete Courses', path: '/' },
+  { name: 'Registration', href: '/registration', current: false },
+  { name: 'Login', href: '/login', current: false },
 ];
 
 const social = [
