@@ -33,14 +33,16 @@ const Registration = () => {
       const emails = forms[0][2].value.toString();
       const passWord = forms[0][3].value.toString();
 
-      const details = {
-        username: userName,
-        password: passWord,
-        email: emails,
-        full_name: fullName,
-      };
+      if ((fullName !== '') && (userName !== '') && (emails !== '') && (passWord !== '')) {
+        const details = {
+          username: userName,
+          password: passWord,
+          email: emails,
+          full_name: fullName,
+        };
 
-      createUser(details);
+        createUser(details);
+      }
     });
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
 

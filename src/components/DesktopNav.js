@@ -1,9 +1,12 @@
 import React from 'react';
+// import { useSelector, shallowEqual } from 'react-redux';
 import logo from '../assets/images/logo.png';
 import twitter from '../assets/images/twitter-icon.png';
 import facebook from '../assets/images/facebook-icon.png';
 import linkedin from '../assets/images/linkedin-icon.png';
 import github from '../assets/images/github-icon.png';
+
+// const token = useSelector((state) => state.token, shallowEqual);
 
 const navigation = [
   { name: 'Courses', href: '/', current: true },
@@ -11,6 +14,7 @@ const navigation = [
   { name: 'My reservation', href: '/reservations', current: false },
   { name: 'Add Course', href: '/Add Course', current: false },
   { name: 'Delete Course', href: '#', current: false },
+  { name: 'Logout', href: '#', current: false },
   { name: 'Registration', href: '/registration', current: false },
   { name: 'Login', href: '/login', current: false },
 ];

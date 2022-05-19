@@ -24,7 +24,7 @@ export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:
     body: JSON.stringify(payload),
   }).then((response) => response.json())
   .then((data) => {
-    dispatch(addToken(data.token));
+    if (Object.keys(data)[0] === 'token') dispatch(addToken(data.token));
   });
 
 const tokenReducer = (state = initialState, action) => {
