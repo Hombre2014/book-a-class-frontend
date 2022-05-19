@@ -52,6 +52,8 @@ const Login = () => {
       });
   };
 
+  console.log(token);
+
   return (
     <div className="d-flex flex-column align-items-center">
       <div className="d-flex flex-column justify-content-center m-3">
