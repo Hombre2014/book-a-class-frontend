@@ -7,17 +7,21 @@ import Reserve from './features/reservations/Reserve';
 import Reservations from './features/reservations/Reservations';
 import Login from './components/Login';
 import Registration from './components/Registration';
+import Menu from './pages/Menu';
+import DeletePage from './components/DeletePage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/details/:id/reserve" element={<Reserve />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/delete_course" element={<DeletePage />} />
       </Routes>
     </BrowserRouter>
   );
