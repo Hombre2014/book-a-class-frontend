@@ -33,7 +33,7 @@ const SideBar = () => {
             <button type="button" onClick={() => navigate('/')} className="bg-lime-500 text-slate-50 group flex items-center pl-5 py-3 hover:text-slate-900" aria-current="page">Courses</button>
             <button type="button" onClick={() => navigate('/')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">Reserve</button>
             <button type="button" onClick={() => navigate('/reservations')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">My Reservation</button>
-            <button type="button" onClick={() => navigate('/')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">Add Course</button>
+            <button type="button" onClick={() => navigate('/add_course')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">Add Course</button>
             <button type="button" onClick={() => navigate('/delete_course')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">Delete Course</button>
             <button type="button" onClick={() => navigate('/registration')} className="text-slate-900 hover:bg-lime-200 group flex items-center pl-5 py-3 hover:text-slate-900">Registration</button>
             {

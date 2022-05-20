@@ -3,6 +3,7 @@
 import React from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { refresh } from '../app/store';
 import { addTokenAsync } from '../redux/login/login';
 import Menu from '../pages/Menu';
 

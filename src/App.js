@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Registration from './components/Registration';
 import Menu from './pages/Menu';
 import DeletePage from './components/DeletePage';
+import AddCourse from './components/AddCourse';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/delete_course" element={<DeletePage />} />
+        <Route path="/add_course" element={<AddCourse />} />
       </Routes>
     </BrowserRouter>
   );

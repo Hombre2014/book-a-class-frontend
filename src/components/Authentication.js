@@ -10,14 +10,6 @@ const Authentication = () => {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
-    // body: JSON.stringify(
-    //   {
-    //     reserve_date: date,
-    //     duration: 7,
-    //     user_id: 4,
-    //     course_id: course.id,
-    //   },
-    // ),
   };
 
   const authResult = async () => {

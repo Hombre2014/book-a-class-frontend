@@ -18,11 +18,14 @@ export const addCourseAsync = (payload) => (dispatch) => fetch('http://localhost
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${payload[0]}`,
+
     },
-    body: JSON.stringify(payload),
+    body: JSON.stringify(payload[1]),
   }).then((response) => response.json())
   .then((data) => {
-    if (Object.keys(data)[0] === 'success') dispatch(addCourse(payload));
+    console.log(data);
+    if (Object.keys(data)[0] === 'success') dispatch(addCourse(payload[1]));
   });
 
 export const removeAsync = (payload) => (dispatch) => fetch(`http://localhost:3000/api/v1/courses/${payload.id}`,

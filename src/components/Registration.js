@@ -1,10 +1,13 @@
 /* eslint-disable no-console */
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addTokenAsync } from '../redux/login/login';
 import Menu from '../pages/Menu';
 
 const Registration = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const createUser = (payload) => fetch('http://localhost:3000/api/v1/users',
     {
@@ -15,7 +18,8 @@ const Registration = () => {
       body: JSON.stringify(payload),
     }).then((response) => response.json())
     .then((data) => {
-      if (Object.keys(data)[0] === 'success') {
+      if (Object.keys(data)[0] !== 'error') {
+        dispatch(addTokenAsync(data));
         navigate('/');
       } else {
         navigate('/registration');
