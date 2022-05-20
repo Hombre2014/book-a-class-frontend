@@ -12,10 +12,9 @@ function classNames(...classes) {
 
 const menuItems = [
   { name: 'Courses', path: '/' },
-  { name: 'Reserve', path: '/' },
   { name: 'My reservations', path: '/reservations' },
-  { name: 'Add Courses', path: '/' },
-  { name: 'Delete Courses', path: '/' },
+  { name: 'Add Courses', path: '/add_course' },
+  { name: 'Delete Courses', path: '/delete_course' },
   { name: 'Registration', href: '/registration', current: false },
   { name: 'Login', href: '/login', current: false },
 ];

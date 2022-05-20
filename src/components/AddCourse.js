@@ -34,7 +34,7 @@ const AddCourse = () => {
         };
 
         dispatch(addCourseAsync([token, details]));
-        alert('User created!');
+        alert('The course is added!');
         navigate('/');
       }
     });
