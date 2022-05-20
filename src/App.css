@@ -1,39 +1,264 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable */
+
+.mobile-btns {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.header {
+  background-image: linear-gradient(to right, #83cc16cc, #83cc16c2), url('./assets/images/mobile-back1.jpg');
+  background-size: cover;
+}
+
+.desktop-nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-reserved {
+  width: 100%;
+  position: relative;
+  background-color: #96bf02;
+  opacity: 0.8;
+}
+
+.photo-reserve {
+  height: 100vh !important;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0.3;
+}
+
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  z-index: 5;
+  border-bottom: 2px solid #b1f053cc;
+  padding: 0 4rem;
+  padding-bottom: 1rem;
+}
+
+.description {
   text-align: center;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.course-details {
+  margin: 2rem 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+.reserve-button {
+  background-color: #fff;
+  color: #96bf02;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+}
+
+.get-button {
+  display: block;
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+  margin: 2rem auto;
+}
+
+.get-button:hover {
+  background-color: #bee924;
+}
+
+.reserve-button:hover {
+  color: #fff;
+  background-color: #96bf02;
+}
+
+.form-buttons {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 2rem;
+}
+
+.select-container {
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  min-width: 140px;
+  border: 2px solid #fff;
+}
+
+.select-button {
+  background-color: #96bf02;
+  color: #fff;
+}
+
+.my-res-title {
+  margin: 2rem auto;
+}
+
+.container-table {
+  max-width: 80%;
+  margin: 2rem auto;
+}
+
+.auth_form_button {
+  border: black 2px solid;
+  color: #fff;
+  background-color: rgb(245, 61, 61);
+  padding: 0.4rem 0.8em;
+  border-radius: 10%;
+  font-weight: 500;
+}
+
+.reg-button {
+  background-color: #96bf02;
+  color: #fff;
+  padding: 0.4rem 0.8em;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.reg-button:hover {
+  background-color: #bee923;
+  color: #fff;
+}
+
+.auth_form_button:hover {
+  background-color: rgb(182, 17, 17);
+}
+
+.auth_form {
+  width: 40%;
+}
+
+.auth_form_reg {
+  width: 60%;
+}
+
+@media screen and (max-width: 500px) {
+  .auth_form,
+  .auth_form_reg {
+    width: 90%;
   }
 }
 
-.App-header {
-  min-height: 100vh;
+@media screen and (max-width: 900px) {
+  .auth_form,
+  .auth_form_reg {
+    width: 80%;
+  }
+}
+
+.container-course {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.image {
+  border-radius: 5%;
+}
+
+.three-col {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.key {
+  max-width: 33%;
+  text-align: center;
+}
+
+.latest {
+  margin: 2rem 0 4rem 0;
+}
+
+.all-courses {
+  width: 87%;
+}
+
+.home {
+  display: flex;
+}
+
+.cat,
+.description-text {
+  color: #b5b5b5;
+}
+
+.title-text {
+  margin: 2rem 0;
+}
+
+.btn-reserve {
+  margin: 1rem;
+  border-radius: 20px;
+  background-color: #95b916;
+  max-width: 180px;
+  color: #fff;
+}
+
+.con-details {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+th {
+  text-align: left;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.success {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.text-slate-50,
+.text-slate-900 {
+  width: 100% !important;
+}
+
+.login {
+  width: 100%;
+}
+
+.back {
+  margin-right: 1rem;
+  background-color: #96bf02;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.back:hover {
+  color: #96bf02;
+  background-color: #fff;
 }
