@@ -19,6 +19,10 @@ The project requirements can be viewed [here](https://github.com/microverseinc/c
 - Database: PostgreSQL
 - Tools: ReduxToolkit
 
+## Screenshot
+
+![Home](./src/assets/images/Snapshot.JPG)
+
 ## Usage
 
 ### To start the back-end, do the following:
