@@ -34,7 +34,6 @@ const AddCourse = () => {
         };
 
         dispatch(addCourseAsync([token, details]));
-        alert('The course is added!');
         navigate('/');
       }
     });

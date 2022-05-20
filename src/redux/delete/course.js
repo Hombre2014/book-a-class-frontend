@@ -24,7 +24,6 @@ export const addCourseAsync = (payload) => (dispatch) => fetch('http://localhost
     body: JSON.stringify(payload[1]),
   }).then((response) => response.json())
   .then((data) => {
-    console.log(data);
     if (Object.keys(data)[0] === 'success') dispatch(addCourse(payload[1]));
   });
 
