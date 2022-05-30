@@ -13,7 +13,7 @@ const Authentication = () => {
   };
 
   const authResult = async () => {
-    const response = await fetch('http://localhost:3000/api/v1/authenticate', authUser);
+    const response = await fetch('https://book-a-class.herokuapp.com/api/v1/authenticate', authUser);
     const data = await response.json();
     return data;
   };

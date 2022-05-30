@@ -22,7 +22,7 @@ const Reservations = () => {
   };
 
   const getReservations = async () => {
-    const response = await fetch('http://localhost:3000/api/v1/users/1/reservations', newReservation);
+    const response = await fetch('https://book-a-class.herokuapp.com/api/v1/users/1/reservations', newReservation);
     const data = await response.json();
     setReservations(data);
     console.log(data);

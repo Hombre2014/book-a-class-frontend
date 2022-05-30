@@ -9,7 +9,7 @@ const Registration = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const createUser = (payload) => fetch('http://localhost:3000/api/v1/users',
+  const createUser = (payload) => fetch('https://book-a-class.herokuapp.com/api/v1/users',
     {
       method: 'POST',
       headers: {

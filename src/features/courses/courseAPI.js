@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const API_URL = 'http://localhost:3000/api/v1/courses';
+const API_URL = 'https://book-a-class.herokuapp.com/api/v1/courses';
 
 const fetchCourses = createAsyncThunk(
   'courses/fetchCourses',

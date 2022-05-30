@@ -9,7 +9,7 @@ const Details = () => {
   const [course, setCourse] = useState({});
 
   const fetchCourse = async () => {
-    const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
+    const course = await fetch(`https://book-a-class.herokuapp.com/api/v1/courses/${id}`);
     const res = await course.json();
     setCourse(res);
     return res;

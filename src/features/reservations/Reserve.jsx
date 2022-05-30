@@ -14,7 +14,7 @@ const Reserve = () => {
   console.log(token[0]);
 
   const fetchCourse = async () => {
-    const course = await fetch(`http://localhost:3000/api/v1/courses/${id}`);
+    const course = await fetch(`https://book-a-class.herokuapp.com/api/v1/courses/${id}`);
     const res = await course.json();
     setCourse(res);
     return res;
@@ -25,7 +25,7 @@ const Reserve = () => {
   }, []);
 
   const fetchDates = async () => {
-    const dates = await fetch(`http://localhost:3000/api/v1/courses/${id}/start_dates`);
+    const dates = await fetch(`https://book-a-class.herokuapp.com/api/v1/courses/${id}/start_dates`);
     const res = await dates.json();
     setDates(res);
     return res;
@@ -56,7 +56,7 @@ const Reserve = () => {
   };
 
   const createReservation = async () => {
-    const response = await fetch('http://localhost:3000/api/v1/users/1/reservations', newReservation);
+    const response = await fetch('https://book-a-class.herokuapp.com/api/v1/users/1/reservations', newReservation);
     const data = await response.json();
     return data;
   };

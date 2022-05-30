@@ -13,7 +13,7 @@ export const removeCourse = (payload) => ({
   payload,
 });
 
-export const addCourseAsync = (payload) => (dispatch) => fetch('http://localhost:3000/api/v1/courses',
+export const addCourseAsync = (payload) => (dispatch) => fetch('https://book-a-class.herokuapp.com/api/v1/courses',
   {
     method: 'POST',
     headers: {
@@ -27,7 +27,7 @@ export const addCourseAsync = (payload) => (dispatch) => fetch('http://localhost
     if (Object.keys(data)[0] === 'success') dispatch(addCourse(payload[1]));
   });
 
-export const removeAsync = (payload) => (dispatch) => fetch(`http://localhost:3000/api/v1/courses/${payload.id}`,
+export const removeAsync = (payload) => (dispatch) => fetch(`https://book-a-class.herokuapp.com/api/v1/courses/${payload.id}`,
   {
     method: 'DELETE',
     headers: {

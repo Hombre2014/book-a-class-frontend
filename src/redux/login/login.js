@@ -14,7 +14,7 @@ export const removeToken = () => ({
   type: REMOVE_TOKEN,
 });
 
-export const addTokenAsync = (payload) => (dispatch) => fetch('http://localhost:3000/api/v1/authenticate',
+export const addTokenAsync = (payload) => (dispatch) => fetch('https://book-a-class.herokuapp.com/api/v1/authenticate',
   {
     method: 'POST',
     headers: {
